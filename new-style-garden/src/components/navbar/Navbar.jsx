@@ -1,0 +1,77 @@
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Link, NavLink } from "react-router-dom";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+
+const navigation = [
+    { name: 'Начало', path: '/', visibleFor: 'all' },
+    // { name: 'News feed', path: '/news-feed', visibleFor: 'all' },
+    // { name: 'Groups', path: '/groups', visibleFor: 'all' },
+    { name: 'Контакти', path: '/about', visibleFor: 'all' },
+]
+
+export default function Navbar() {
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+    const textVariants = {
+        hidden: { y: -150, opacity: 0 },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                type: "spring",
+                stiffness: 80,
+                damping: 20,
+                bounce: 0.1,
+                delay: 0.3,
+            },
+        },
+    };
+
+    const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+
+    return (
+        <motion.nav
+            variants={textVariants}
+            initial="hidden"
+            animate="visible"
+            className="fixed top-0 left-0 w-full flex justify-between items-center px-6 py-4 bg-gradient-to-l from-lime-300 to-lime-600 bg-opacity-40 backdrop-blur-md z-10 h-14"
+        >
+            <div className="flex items-center">
+                <Link
+                    onClick={() => {
+                        window.scrollTo({ top: 0, behavior: 'smooth' })
+                        setIsMobileMenuOpen(false)
+                    }}
+                    to="/">
+                    <img src="/logo.png" alt="Logo" className="w-20 h-auto" />
+                </Link>
+            </div>
+            <div className="md:hidden flex">
+                <button onClick={toggleMobileMenu}>
+                    {isMobileMenuOpen ? (
+                        <AiOutlineClose className="text-2xl text-black" />
+                    ) : (
+                        <AiOutlineMenu className="text-2xl text-black" />
+                    )}
+                </button>
+            </div>
+            <ul
+                className={`md:flex md:items-center md:space-x-6 text-gray-800 font-medium ${isMobileMenuOpen
+                    ? "flex flex-col absolute top-16 right-0 w-full bg-lime-200 bg-opacity-80 backdrop-blur-md px-4 py-6 z-10"
+                    : "hidden"
+                    }`}>
+                {navigation.map(nav => (
+                    <li key={nav.name} className="hover:text-gray-400 py-2 md:py-0">
+                        <NavLink
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            style={({ isActive }) => isActive ? { color: 'oklch(0.532 0.157 131.589)' } : {}}
+                            to={nav.path}>
+                            {nav.name}
+                        </NavLink>
+                    </li>
+                ))}
+            </ul>
+        </motion.nav >
+    )
+}
