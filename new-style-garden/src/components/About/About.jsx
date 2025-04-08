@@ -3,6 +3,7 @@
 import { useState } from "react";
 import ContactForm from "./ContactForm.jsx";
 import HeaderBanner from "../header-banner/HeaderBanner.jsx";
+import FacebookWidget from "./FacebookWidget.jsx";
 
 export default function About() {
 
@@ -30,10 +31,13 @@ export default function About() {
                     съобразена с нуждите и спецификата на проекта. Нашите специалисти ще се свържат с вас
                     за уточнение на детайлите и за организиране на оглед, при необходимост.
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <ContactForm onSuccess={handleSuccess} onError={handleError} />
-                    <div className="relative w-full h-[300px] rounded-xl shadow-lg overflow-hidden">
-                        {/* <MapComponent /> */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 place-items-start md:place-items-center">
+                    <div className="w-full md:w-[500px]">
+                        <ContactForm onSuccess={handleSuccess} onError={handleError} />
+                    </div>
+
+                    <div className="md:ml-8">
+                        <FacebookWidget />
                     </div>
                 </div>
             </div>
