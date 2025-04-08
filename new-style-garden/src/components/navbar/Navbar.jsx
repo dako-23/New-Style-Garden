@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link, NavLink } from "react-router-dom";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+import { FaEnvelope, FaPhoneAlt, FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const navigation = [
     { name: 'Начало', path: '/', visibleFor: 'all' },
+    { name: 'Нашите обекти', path: '/gallery', visibleFor: 'all' },
+    { name: 'Услуги', path: '/services', visibleFor: 'all' },
+    { name: 'Цени', path: '/prices', visibleFor: 'all' },
     { name: 'Контакти', path: '/about', visibleFor: 'all' },
 ]
 
@@ -31,16 +34,30 @@ export default function Navbar() {
 
     return (<>
         <div className="fixed w-full backdrop-blur-md text-white px-6 py-2 flex justify-between items-center z-20">
-            <div className="flex items-center gap-2">
-                <FaPhoneAlt className="text-white" />
-                <span className="font-medium">+359 879 914 560</span>
-            </div>
+            <div className="flex items-center space-x-6">
+                <div className="flex items-center gap-2">
+                    <FaPhoneAlt className="text-white" />
+                    <span className="font-medium">+359 879 914 560</span>
+                </div>
 
-            <div className="flex items-center gap-2">
-                <FaEnvelope className="text-white" />
-                <span className="font-medium">newstylegardenn@gmail.com</span>
+                <div className="flex items-center gap-2">
+                    <FaEnvelope className="text-white" />
+                    <span className="font-medium">newstylegardenn@gmail.com</span>
+                </div>
+            </div>
+            <div className="flex items-center gap-4">
+                <a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-green-500 transition text-xl">
+                    <FaFacebookF />
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-green-500 transition text-xl">
+                    <FaInstagram />
+                </a>
+                <a href="https://youtube.com" target="_blank" rel="noreferrer" className="hover:text-green-500 transition text-xl">
+                    <FaYoutube />
+                </a>
             </div>
         </div>
+
         <motion.nav
             variants={textVariants}
             initial="hidden"
