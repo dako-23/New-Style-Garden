@@ -33,7 +33,7 @@ export default function Navbar() {
     const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
     return (<>
-        <div className="fixed w-full backdrop-blur-md text-white px-6 py-2 flex justify-between items-center z-20">
+        <div className="fixed w-full bg-[#09312C] backdrop-blur-md text-white px-6 py-2 flex justify-between items-center z-20">
             <div className="flex items-center space-x-6">
                 <div className="flex items-center gap-2">
                     <FaPhoneAlt className="text-white" />
@@ -62,7 +62,7 @@ export default function Navbar() {
             variants={textVariants}
             initial="hidden"
             animate="visible"
-            className="fixed top-11 left-0 w-full flex text-xl justify-between items-center px-6 py-5 bg-[rgba(255,255,153,0.6)] backdrop-blur-md z-10 h-16 shadow-md"
+            className="fixed top-10 left-0 w-full flex text-xl justify-between items-center px-6 py-5 bg-white/80 backdrop-blur-md z-10 h-16 shadow-md"
         >
             <div className="flex items-center">
                 <Link
@@ -72,7 +72,7 @@ export default function Navbar() {
                     }}
                     to="/"
                 >
-                    <img src="/navbar-logo.png" alt="Logo" className="w-44 h-auto" />
+                    <img src="/navbar-logo.png" alt="Logo" className=" w-44 h-auto" />
                 </Link>
             </div>
 
@@ -87,8 +87,8 @@ export default function Navbar() {
             </div>
 
             <ul
-                className={`md:flex md:items-center md:space-x-6 md:gap-6 text-gray-900 font-medium ${isMobileMenuOpen
-                    ? "flex flex-col absolute top-20 right-0 w-full bg-yellow-100 bg-opacity-90 backdrop-blur-md px-4 py-6 z-10"
+                className={`md:flex md:items-center md:space-x-6 md:gap-6 text-gray-700 font-medium ${isMobileMenuOpen
+                    ? "flex flex-col absolute top-17 right-0 w-full bg-white/80  bg-opacity-90 backdrop-blur-md px-4 py-6 z-10"
                     : "hidden"
                     }`}
             >
