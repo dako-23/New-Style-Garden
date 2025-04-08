@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link, NavLink } from "react-router-dom";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 
 const navigation = [
     { name: 'Начало', path: '/', visibleFor: 'all' },
-    // { name: 'News feed', path: '/news-feed', visibleFor: 'all' },
-    // { name: 'Groups', path: '/groups', visibleFor: 'all' },
     { name: 'Контакти', path: '/about', visibleFor: 'all' },
 ]
 
@@ -30,23 +29,36 @@ export default function Navbar() {
 
     const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
-    return (
+    return (<>
+        <div className="fixed w-full backdrop-blur-md text-white px-6 py-2 flex justify-between items-center z-20">
+            <div className="flex items-center gap-2">
+                <FaPhoneAlt className="text-white" />
+                <span className="font-medium">+359 879 914 560</span>
+            </div>
+
+            <div className="flex items-center gap-2">
+                <FaEnvelope className="text-white" />
+                <span className="font-medium">newstylegardenn@gmail.com</span>
+            </div>
+        </div>
         <motion.nav
             variants={textVariants}
             initial="hidden"
             animate="visible"
-            className="fixed top-0 left-0 w-full flex justify-between items-center px-6 py-4 bg-gradient-to-l from-lime-300 to-lime-600 bg-opacity-40 backdrop-blur-md z-10 h-14"
+            className="fixed top-11 left-0 w-full flex text-xl justify-between items-center px-6 py-5 bg-[rgba(255,255,153,0.6)] backdrop-blur-md z-10 h-16 shadow-md"
         >
             <div className="flex items-center">
                 <Link
                     onClick={() => {
-                        window.scrollTo({ top: 0, behavior: 'smooth' })
-                        setIsMobileMenuOpen(false)
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                        setIsMobileMenuOpen(false);
                     }}
-                    to="/">
-                    <img src="/logo.png" alt="Logo" className="w-20 h-auto" />
+                    to="/"
+                >
+                    <img src="/navbar-logo.png" alt="Logo" className="w-44 h-auto" />
                 </Link>
             </div>
+
             <div className="md:hidden flex">
                 <button onClick={toggleMobileMenu}>
                     {isMobileMenuOpen ? (
@@ -56,22 +68,32 @@ export default function Navbar() {
                     )}
                 </button>
             </div>
+
             <ul
-                className={`md:flex md:items-center md:space-x-6 text-gray-800 font-medium ${isMobileMenuOpen
-                    ? "flex flex-col absolute top-16 right-0 w-full bg-lime-200 bg-opacity-80 backdrop-blur-md px-4 py-6 z-10"
+                className={`md:flex md:items-center md:space-x-6 md:gap-6 text-gray-900 font-medium ${isMobileMenuOpen
+                    ? "flex flex-col absolute top-20 right-0 w-full bg-yellow-100 bg-opacity-90 backdrop-blur-md px-4 py-6 z-10"
                     : "hidden"
-                    }`}>
-                {navigation.map(nav => (
-                    <li key={nav.name} className="hover:text-gray-400 py-2 md:py-0">
+                    }`}
+            >
+                {navigation.map((nav) => (
+                    <li key={nav.name} className="hover:text-green-900 py-2 md:py-0">
                         <NavLink
                             onClick={() => setIsMobileMenuOpen(false)}
-                            style={({ isActive }) => isActive ? { color: 'oklch(0.532 0.157 131.589)' } : {}}
-                            to={nav.path}>
+                            style={({ isActive }) =>
+                                isActive ? {
+                                    color: "oklch(0.35 0.15 145)",
+                                    borderBottom: "2px solid #111827",
+                                    paddingBottom: "2px",
+                                } : {}
+                            }
+                            to={nav.path}
+                        >
                             {nav.name}
                         </NavLink>
                     </li>
                 ))}
             </ul>
-        </motion.nav >
+        </motion.nav>
+    </>
     )
 }
