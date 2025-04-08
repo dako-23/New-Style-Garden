@@ -8,6 +8,7 @@ import Navbar from "./components/navbar/Navbar.jsx";
 import Gallery from "./components/gallery/Gallery.jsx";
 import Services from "./components/services-page/Services.jsx";
 import Prices from "./components/prices/Prices.jsx";
+import Footer from "./components/footer/Footer.jsx";
 
 function App() {
 
@@ -26,7 +27,7 @@ function App() {
           {/* <Route path="/terms-and-conditions" element={<TermsAndConditions />} /> */}
         </Routes>
         <ToastConfig />
-        {/* <Footer /> */}
+        <Footer />
       </Suspense>
     </Router>
   );
