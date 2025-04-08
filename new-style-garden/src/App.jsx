@@ -5,6 +5,9 @@ import ToastConfig from "./components/notifications/ToastConfig.jsx";
 import Spinner from "./components/loading-spinner/Spinner.jsx";
 import About from "./components/about/About.jsx";
 import Navbar from "./components/navbar/Navbar.jsx";
+import Gallery from "./components/gallery/Gallery.jsx";
+import Services from "./components/services-page/Services.jsx";
+import Prices from "./components/prices/Prices.jsx";
 
 function App() {
 
@@ -15,6 +18,9 @@ function App() {
         <Navbar />
         <Routes>
           {/* <Route path="/" element={<Home />} /> */}
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/prices" element={<Prices />} />
           <Route path="/about" element={<About />} />
           {/* <Route path="*" element={<NotFound />} /> */}
           {/* <Route path="/terms-and-conditions" element={<TermsAndConditions />} /> */}
