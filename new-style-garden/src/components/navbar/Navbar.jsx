@@ -2,15 +2,24 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link, NavLink } from "react-router-dom";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { FaChevronDown } from "react-icons/fa";
 import { FaEnvelope, FaPhoneAlt, FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const navigation = [
-    { name: 'Начало', path: '/', visibleFor: 'all' },
-    { name: 'Нашите обекти', path: '/gallery', visibleFor: 'all' },
-    { name: 'Услуги', path: '/services', visibleFor: 'all' },
-    { name: 'Цени', path: '/prices', visibleFor: 'all' },
-    { name: 'Контакти', path: '/about', visibleFor: 'all' },
-]
+    { name: "Начало", path: "/" },
+    { name: "Нашите обекти", path: "/gallery" },
+    {
+      name: "Услуги",
+      path: "/services",
+      submenu: [
+        { name: "Поддръжка на градини", path: "/services/garden-care" },
+        { name: "Озеленяване и ландфашт", path: "/services/landscaping" },
+        { name: "Поливни системи", path: "/services/irrigation" },
+      ],
+    },
+    { name: "Цени", path: "/prices" },
+    { name: "Контакти", path: "/about" },
+  ];
 
 export default function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -87,27 +96,50 @@ export default function Navbar() {
                     </button>
                 </div>
 
-                <ul
-                    className={`md:flex md:items-center md:space-x-6 md:gap-8 text-gray-700 font-medium ${isMobileMenuOpen
-                        ? "flex flex-col absolute top-17 right-0 w-full bg-white/80  bg-opacity-90 backdrop-blur-md px-4 py-6 z-10"
-                        : "hidden"
-                        }`}
-                >
+                <ul className="md:flex md:items-center md:space-x-6 md:gap-8 text-gray-700 font-medium">
                     {navigation.map((nav) => (
-                        <li key={nav.name} className="hover:text-green-900 py-2 md:py-0">
+                        <li
+                            key={nav.name}
+                            className="relative group py-2 md:py-0 hover:text-green-900"
+                        >
                             <NavLink
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                style={({ isActive }) =>
-                                    isActive ? {
-                                        color: "oklch(0.35 0.15 145)",
-                                        borderBottom: "2px solid #111827",
-                                        paddingBottom: "2px",
-                                    } : {}
-                                }
                                 to={nav.path}
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="inline-flex items-center gap-1"
+                                style={({ isActive }) =>
+                                    isActive
+                                        ? {
+                                            color: "oklch(0.35 0.15 145)",
+                                            borderBottom: "2px solid #111827",
+                                            paddingBottom: "2px",
+                                        }
+                                        : {}
+                                }
                             >
                                 {nav.name}
+                                {nav.submenu && (
+                                    <FaChevronDown className="text-xs mt-[2px]" />
+                                )}
                             </NavLink>
+
+                            {nav.submenu && (
+                                <ul className="absolute left-1/2 transform -translate-x-1/2 left-0 mt-2 bg-white shadow-md rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 min-w-max z-30">
+                                    {nav.submenu.map((sub, idx) => (
+                                        <li
+                                            key={idx}
+                                            className="px-4 py-2 hover:bg-gray-100 whitespace-nowrap first:rounded-t-md last:rounded-b-md"
+                                        >
+                                            <NavLink
+                                                to={sub.path}
+                                                onClick={() => setIsMobileMenuOpen(false)}
+                                                className="block text-sm"
+                                            >
+                                                {sub.name}
+                                            </NavLink>
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
                         </li>
                     ))}
                 </ul>
