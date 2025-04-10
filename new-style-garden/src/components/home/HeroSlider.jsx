@@ -8,7 +8,7 @@ import 'swiper/css/effect-fade';
 
 export default function HeroSlider() {
     return (
-        <div className="w-full h-[500px] md:h-[800px] relative">
+        <div className="w-full h-[500px] md:h-[750px] relative">
             <Swiper
                 modules={[Navigation, Pagination, Autoplay, EffectFade]}
                 navigation
