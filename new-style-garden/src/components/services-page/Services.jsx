@@ -1,12 +1,12 @@
 import HeaderBanner from "../header-banner/HeaderBanner.jsx";
-import ServiceTimeline from "./ServiceTimeline.jsx";
+import OurServices from "./OurServices.jsx";
 
 
 export default function Services() {
     return (
         <>
             <HeaderBanner title={'Услуги'} />
-            <ServiceTimeline />
+            <OurServices/>
         </>
     );
 }
