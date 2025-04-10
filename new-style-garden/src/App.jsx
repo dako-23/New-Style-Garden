@@ -9,6 +9,7 @@ import Gallery from "./components/gallery/Gallery.jsx";
 import Services from "./components/services-page/Services.jsx";
 import Prices from "./components/prices/Prices.jsx";
 import Footer from "./components/footer/Footer.jsx";
+import Home from "./components/home/Home.jsx";
 
 function App() {
 
@@ -18,7 +19,7 @@ function App() {
         <ScrollToTop />
         <Navbar />
         <Routes>
-          {/* <Route path="/" element={<Home />} /> */}
+          <Route path="/" element={<Home />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/services" element={<Services />} />
           <Route path="/prices" element={<Prices />} />
