@@ -26,11 +26,11 @@
 
 @layer utilities {
     .bg-main {
-        /* background-image: url('/main-bg.png');
-        background-size: auto 1200px;
+        background-image: url('/main-bg1.svg');
+        background-size: contain;
         background-position: center;
-        background-repeat: no-repeat; */
-        background-color: rgb(243, 243, 243) !important;
+        background-repeat: no-repeat;
+        /* background-color: rgb(243, 243, 243) !important; */
     }
 
     .text-strong-shadow {
