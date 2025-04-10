@@ -25,7 +25,7 @@ export default function Navbar() {
                 stiffness: 80,
                 damping: 20,
                 bounce: 0.1,
-                delay: 0.3,
+                delay: 0.2,
             },
         },
     };
@@ -33,28 +33,30 @@ export default function Navbar() {
     const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
     return (<>
-        <div className="fixed w-full bg-[#09312C] backdrop-blur-md text-white px-6 py-2 flex justify-between items-center z-20">
-            <div className="flex items-center space-x-6">
-                <div className="flex items-center gap-2">
-                    <FaPhoneAlt className="text-white" />
-                    <span className="font-medium">+359 879 914 560</span>
-                </div>
+        <div className="fixed w-full bg-[#09312C] backdrop-blur-md text-white z-20">
+            <div className="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between pl-1 pr-1">
+                <div className="flex items-center space-x-6">
+                    <div className="flex items-center gap-2">
+                        <FaPhoneAlt className="text-white" />
+                        <span className="font-medium">+359 879 914 560</span>
+                    </div>
 
-                <div className="flex items-center gap-2">
-                    <FaEnvelope className="text-white" />
-                    <span className="font-medium">newstylegardenn@gmail.com</span>
+                    <div className="flex items-center gap-2">
+                        <FaEnvelope className="text-white" />
+                        <span className="font-medium">newstylegardenn@gmail.com</span>
+                    </div>
                 </div>
-            </div>
-            <div className="flex items-center gap-4">
-                <a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-green-500 transition text-xl">
-                    <FaFacebookF />
-                </a>
-                <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-green-500 transition text-xl">
-                    <FaInstagram />
-                </a>
-                <a href="https://youtube.com" target="_blank" rel="noreferrer" className="hover:text-green-500 transition text-xl">
-                    <FaYoutube />
-                </a>
+                <div className="flex items-center gap-4">
+                    <a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-green-500 transition text-xl">
+                        <FaFacebookF />
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-green-500 transition text-xl">
+                        <FaInstagram />
+                    </a>
+                    <a href="https://youtube.com" target="_blank" rel="noreferrer" className="hover:text-green-500 transition text-xl">
+                        <FaYoutube />
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -62,9 +64,9 @@ export default function Navbar() {
             variants={textVariants}
             initial="hidden"
             animate="visible"
-            className="fixed top-10 left-0 w-full flex text-xl justify-between items-center px-6 py-5 bg-white/80 backdrop-blur-md z-10 h-16 shadow-md"
+            className="fixed top-10 left-0 w-full bg-white/80 backdrop-blur-md z-10 shadow-md"
         >
-            <div className="flex items-center">
+            <div className="max-w-7xl mx-auto px-0 h-17 flex items-center justify-between text-xl">
                 <Link
                     onClick={() => {
                         window.scrollTo({ top: 0, behavior: "smooth" });
@@ -72,45 +74,45 @@ export default function Navbar() {
                     }}
                     to="/"
                 >
-                    <img src="/navbar-logo.png" alt="Logo" className=" w-44 h-auto" />
+                    <img src="/navbar-logo.png" alt="Logo" className="w-39 h-auto" />
                 </Link>
-            </div>
 
-            <div className="md:hidden flex">
-                <button onClick={toggleMobileMenu}>
-                    {isMobileMenuOpen ? (
-                        <AiOutlineClose className="text-2xl text-black" />
-                    ) : (
-                        <AiOutlineMenu className="text-2xl text-black" />
-                    )}
-                </button>
-            </div>
+                <div className="md:hidden flex">
+                    <button onClick={toggleMobileMenu}>
+                        {isMobileMenuOpen ? (
+                            <AiOutlineClose className="text-2xl text-black" />
+                        ) : (
+                            <AiOutlineMenu className="text-2xl text-black" />
+                        )}
+                    </button>
+                </div>
 
-            <ul
-                className={`md:flex md:items-center md:space-x-6 md:gap-6 text-gray-700 font-medium ${isMobileMenuOpen
-                    ? "flex flex-col absolute top-17 right-0 w-full bg-white/80  bg-opacity-90 backdrop-blur-md px-4 py-6 z-10"
-                    : "hidden"
-                    }`}
-            >
-                {navigation.map((nav) => (
-                    <li key={nav.name} className="hover:text-green-900 py-2 md:py-0">
-                        <NavLink
-                            onClick={() => setIsMobileMenuOpen(false)}
-                            style={({ isActive }) =>
-                                isActive ? {
-                                    color: "oklch(0.35 0.15 145)",
-                                    borderBottom: "2px solid #111827",
-                                    paddingBottom: "2px",
-                                } : {}
-                            }
-                            to={nav.path}
-                        >
-                            {nav.name}
-                        </NavLink>
-                    </li>
-                ))}
-            </ul>
-        </motion.nav>
+                <ul
+                    className={`md:flex md:items-center md:space-x-6 md:gap-8 text-gray-700 font-medium ${isMobileMenuOpen
+                        ? "flex flex-col absolute top-17 right-0 w-full bg-white/80  bg-opacity-90 backdrop-blur-md px-4 py-6 z-10"
+                        : "hidden"
+                        }`}
+                >
+                    {navigation.map((nav) => (
+                        <li key={nav.name} className="hover:text-green-900 py-2 md:py-0">
+                            <NavLink
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                style={({ isActive }) =>
+                                    isActive ? {
+                                        color: "oklch(0.35 0.15 145)",
+                                        borderBottom: "2px solid #111827",
+                                        paddingBottom: "2px",
+                                    } : {}
+                                }
+                                to={nav.path}
+                            >
+                                {nav.name}
+                            </NavLink>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </motion.nav >
     </>
     )
 }
