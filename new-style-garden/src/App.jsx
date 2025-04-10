@@ -10,6 +10,7 @@ import Services from "./components/services-page/Services.jsx";
 import Prices from "./components/prices/Prices.jsx";
 import Footer from "./components/footer/Footer.jsx";
 import Home from "./components/home/Home.jsx";
+import ServicesIrrigation from "./components/services-page/ServicesIrrigation.jsx";
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/irrigation" element={<ServicesIrrigation />} />
           <Route path="/prices" element={<Prices />} />
           <Route path="/about" element={<About />} />
           {/* <Route path="*" element={<NotFound />} /> */}
