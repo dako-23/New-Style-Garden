@@ -3,6 +3,7 @@ import {
     VerticalTimelineElement,
 } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import { Link } from "react-router-dom";
 
 import { FaTools, FaSeedling, FaWrench, FaTint, FaLeaf } from 'react-icons/fa';
 
@@ -86,6 +87,16 @@ export default function ServiceTimeline() {
                     <p>Редовна профилактика, почистване и настройка на системата за оптимална работа.</p>
                 </VerticalTimelineElement>
             </VerticalTimeline>
+            <div className="flex justify-center mt-10">
+                <Link to={'/about'}>
+                    <button
+                        className="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-3 rounded-full shadow-md transition cursor-pointer"
+
+                    >
+                        Заяви оферта
+                    </button>
+                </Link>
+            </div>
         </div>
     );
 }
