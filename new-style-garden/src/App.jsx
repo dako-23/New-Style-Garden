@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React, { lazy, Suspense } from "react";
-import ScrollToTop from "../helpers/scrollToTop.js";
+import ScrollToTop from "./helpers/scrollToTop.js";
 import ToastConfig from "./components/notifications/ToastConfig.jsx";
 import Spinner from "./components/loading-spinner/Spinner.jsx";
 import About from "./components/about/About.jsx";
@@ -10,7 +10,7 @@ import Services from "./components/services-page/Services.jsx";
 import Prices from "./components/prices/Prices.jsx";
 import Footer from "./components/footer/Footer.jsx";
 import Home from "./components/home/Home.jsx";
-import ServicesIrrigation from "./components/services-page/ServicesIrrigation.jsx";
+import IrrigationServices from "./components/irrigation-service/IrrigationServices.jsx";
 
 function App() {
 
@@ -23,7 +23,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/services/irrigation" element={<ServicesIrrigation />} />
+          <Route path="/services/irrigation" element={<IrrigationServices />} />
           <Route path="/prices" element={<Prices />} />
           <Route path="/about" element={<About />} />
           {/* <Route path="*" element={<NotFound />} /> */}
