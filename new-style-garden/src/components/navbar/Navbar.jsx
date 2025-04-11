@@ -42,7 +42,7 @@ export default function Navbar() {
     const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
     return (<>
-        <div className="fixed w-full bg-[#09312C] backdrop-blur-md text-white z-20">
+        <div className="fixed w-full bg-[#09312C] backdrop-blur-md text-white z-50">
             <div className="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between pl-1 pr-1">
                 <div className="flex items-center space-x-6">
                     <div className="flex items-center gap-2">
@@ -73,7 +73,7 @@ export default function Navbar() {
             variants={textVariants}
             initial="hidden"
             animate="visible"
-            className="fixed top-10 left-0 w-full bg-white/80 backdrop-blur-md z-10 shadow-md"
+            className="fixed top-10 left-0 w-full bg-white/80 backdrop-blur-md z-40 shadow-md"
         >
             <div className="max-w-7xl mx-auto px-0 h-17 flex items-center justify-between text-xl">
                 <Link
