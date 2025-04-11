@@ -12,6 +12,7 @@ import Footer from "./components/footer/Footer.jsx";
 import Home from "./components/home/Home.jsx";
 import IrrigationServices from "./components/irrigation/IrrigationServices.jsx";
 import GardenCareServices from "./components/garden-care/GardenCareServices.jsx";
+import LandscapingServices from "./components/landscaping/LandscapingServices.jsx";
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/services/irrigation" element={<IrrigationServices />} />
           <Route path="/services/garden-care" element={<GardenCareServices />} />
+          <Route path="/services/landscaping" element={<LandscapingServices />} />
           <Route path="/prices" element={<Prices />} />
           <Route path="/about" element={<About />} />
           {/* <Route path="*" element={<NotFound />} /> */}
