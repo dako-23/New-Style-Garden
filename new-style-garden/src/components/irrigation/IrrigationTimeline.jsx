@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { FaTools, FaSeedling, FaWrench, FaTint, FaLeaf } from 'react-icons/fa';
 import useLineAnimation from '../../hooks/useLineAnimation.js';
 
-const timeElements = [
+const timeLineElements = [
     { title: 'Консултация и оглед на обекта', content: 'Професионален оглед на терена и оценка на нуждите от поливна система.', step: 'Стъпка 1', icon: <FaSeedling /> },
     { title: 'Проектиране на системата', content: 'Изготвяне на индивидуален проект, съобразен с растителността и терена.', step: 'Стъпка 2', icon: <FaWrench /> },
     { title: 'Монтаж и инсталация', content: 'Професионално изграждане на поливната система с висококачествени материали.', step: 'Стъпка 3', icon: <FaTools /> },
@@ -18,16 +18,20 @@ export default function IrrigationTimeline() {
 
     return (
         <div className="py-12 px-6">
-            <h2 className="text-3xl font-bold text-center text-sky-600 mb-12">
-                Изграждане и поддръжка на поливна система
+            <h2 className="text-3xl font-bold text-center text-sky-600 mb-8">
+            Автоматизация с грижа – Вашата зелена система за напояване
             </h2>
+            <p className="text-center text-sky-500 mb-10 font-semibold text-lg">
+                Оптимална грижа за всяко зелено пространство – автоматизирано, ефективно и надеждно.
+            </p>
             <div ref={timeLineRef} className="timeline-animate relative">
                 <VerticalTimeline lineColor="#0ea5e9" >
-                    {timeElements.map(el =>
+                    {timeLineElements.map((el, idx) =>
                         <VerticalTimelineElement
+                            key={idx}
                             className="vertical-timeline-element--work"
                             contentStyle={{ background: '#ecfdf5', color: '#0284c7' }}
-                            contentArrowStyle={{ borderRight: '7px solid #ecfdf5' }}
+                            contentArrowStyle={{ borderRight: '12px solid #0284c7' }}
                             date={el.step}
                             iconStyle={{ background: '#38bdf8', color: '#fff' }}
                             icon={el.icon}
