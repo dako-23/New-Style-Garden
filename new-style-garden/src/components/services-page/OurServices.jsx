@@ -1,8 +1,6 @@
-import { FaLeaf, FaSnowflake, FaBroom, FaTree } from "react-icons/fa";
 import { motion } from 'framer-motion'
 import { Link } from "react-router-dom";
-import SpecializedServices from "./SpecializedServices.jsx";
-
+import SpecializedServices from "../specialized-services/SpecializedServices.jsx";
 
 export default function OurServices() {
     return (
@@ -50,37 +48,3 @@ export default function OurServices() {
         </>
     );
 }
-
-
-
-
-
-{/* <ul className="space-y-4 text-gray-700">
-    <li className="flex items-start gap-3">
-        <FaBroom className="text-green-700 text-xl mt-1" />
-        <span>
-            <strong>Професионално почистване</strong> – за домове, офиси и бизнес обекти. Използваме съвременна техника и безопасни препарати.
-        </span>
-    </li>
-
-    <li className="flex items-start gap-3">
-        <FaLeaf className="text-green-700 text-xl mt-1" />
-        <span>
-            <strong>Градинска поддръжка и озеленяване</strong> – оформяне на тревни площи, подрязване на храсти, торене и профилактика.
-        </span>
-    </li>
-
-    <li className="flex items-start gap-3">
-        <FaTree className="text-green-700 text-xl mt-1" />
-        <span>
-            <strong>Проектиране и изграждане</strong> на зелени пространства, съобразени с растителността и терена.
-        </span>
-    </li>
-
-    <li className="flex items-start gap-3">
-        <FaSnowflake className="text-green-700 text-xl mt-1" />
-        <span>
-            <strong>Снегопочистване</strong> – за малки и големи площи, включително търговски и индустриални имоти.
-        </span>
-    </li>
-</ul> */}
