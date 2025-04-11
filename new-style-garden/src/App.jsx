@@ -10,7 +10,8 @@ import Services from "./components/services-page/Services.jsx";
 import Prices from "./components/prices/Prices.jsx";
 import Footer from "./components/footer/Footer.jsx";
 import Home from "./components/home/Home.jsx";
-import IrrigationServices from "./components/irrigation-service/IrrigationServices.jsx";
+import IrrigationServices from "./components/irrigation/IrrigationServices.jsx";
+import GardenCareServices from "./components/garden-care/GardenCareServices.jsx";
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/irrigation" element={<IrrigationServices />} />
+          <Route path="/services/garden-care" element={<GardenCareServices />} />
           <Route path="/prices" element={<Prices />} />
           <Route path="/about" element={<About />} />
           {/* <Route path="*" element={<NotFound />} /> */}

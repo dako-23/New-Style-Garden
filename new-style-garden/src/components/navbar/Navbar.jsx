@@ -1,25 +1,25 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { Link, NavLink } from "react-router-dom";
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { FaChevronDown } from "react-icons/fa";
-import { FaEnvelope, FaPhoneAlt, FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Link, NavLink } from 'react-router-dom';
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import { FaChevronDown, FaLeaf, FaSeedling, FaTint } from 'react-icons/fa';
+import { FaEnvelope, FaPhoneAlt, FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa';
 
 const navigation = [
-    { name: "Начало", path: "/" },
-    { name: "Нашите обекти", path: "/gallery" },
+    { name: 'Начало', path: '/' },
+    { name: 'Нашите обекти', path: '/gallery' },
     {
-      name: "Услуги",
-      path: "/services",
-      submenu: [
-        { name: "Поддръжка на градини", path: "/services/garden-care" },
-        { name: "Озеленяване и ландфашт", path: "/services/landscaping" },
-        { name: "Поливни системи", path: "/services/irrigation" },
-      ],
+        name: 'Услуги',
+        path: '/services',
+        submenu: [
+            { name: 'Поддръжка на градини', path: '/services/garden-care', colorClass: 'text-green-700', icon: <FaLeaf className='mr-2' /> },
+            { name: 'Озеленяване и ландфашт', path: '/services/landscaping', colorClass: 'text-amber-700', icon: <FaSeedling className='mr-2' /> },
+            { name: 'Поливни системи', path: '/services/irrigation', colorClass: 'text-sky-700', icon: <FaTint className='mr-2' /> },
+        ],
     },
-    { name: "Цени", path: "/prices" },
-    { name: "Контакти", path: "/about" },
-  ];
+    { name: 'Цени', path: '/prices' },
+    { name: 'Контакти', path: '/about' },
+];
 
 export default function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -30,7 +30,7 @@ export default function Navbar() {
             y: 0,
             opacity: 1,
             transition: {
-                type: "spring",
+                type: 'spring',
                 stiffness: 80,
                 damping: 20,
                 bounce: 0.1,
@@ -132,9 +132,9 @@ export default function Navbar() {
                                             <NavLink
                                                 to={sub.path}
                                                 onClick={() => setIsMobileMenuOpen(false)}
-                                                className="block text-sm"
+                                                className={`flex items-center block text-sm ${sub.colorClass}`}
                                             >
-                                                {sub.name}
+                                                {sub.icon} {sub.name}
                                             </NavLink>
                                         </li>
                                     ))}
@@ -147,4 +147,5 @@ export default function Navbar() {
         </motion.nav >
     </>
     )
+
 }
