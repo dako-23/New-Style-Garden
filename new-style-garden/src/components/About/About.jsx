@@ -26,7 +26,7 @@ export default function About() {
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, ease: "easeOut" }}
+                    transition={{ duration: 0.4, ease: "easeOut" }}
                     className="max-w-6xl mx-auto py-16 px-6">
 
                     <h2 className="text-3xl font-extrabold text-gray-700 text-center mb-4">
