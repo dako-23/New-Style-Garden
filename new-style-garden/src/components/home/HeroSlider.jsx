@@ -4,6 +4,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
+import { Link } from 'react-router-dom';
 
 
 export default function HeroSlider() {
@@ -34,10 +35,13 @@ export default function HeroSlider() {
                                     <p className="text-lg md:text-xl text-strong-shadow mb-6 font-medium">
                                         Красота. Природа. Хармония.
                                     </p>
-                                    <button
-                                        className="px-6 py-3 bg-lime-600 hover:bg-lime-500 text-white font-semibold rounded-full shadow-md transition">
-                                        Разгледай услугите
-                                    </button>
+                                    <Link to={'/services'}>
+                                        <button
+                                            className="px-6 py-3 bg-green-700 hover:bg-green-600 text-white font-semibold rounded-full shadow-md transition cursor-pointer">
+                                            Разгледай услугите
+                                        </button>
+                                    </Link>
+
                                 </div>
                             </div>
                         </div>

@@ -26,7 +26,23 @@
 
 @layer utilities {
     .bg-main {
-        background-image: url('/main-bg3.svg');
+        background-image: url('/main-bg.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        /* background-color: rgb(243, 243, 243) !important; */
+    }
+
+    .bg-main-blue {
+        background-image: url('/main-bg-blue.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        /* background-color: rgb(243, 243, 243) !important; */
+    }
+
+    .bg-main-brown {
+        background-image: url('/main-bg-brown.svg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
