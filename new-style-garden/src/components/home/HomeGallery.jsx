@@ -22,7 +22,6 @@ export default function HomeGalleryCarousel() {
 
     const [open, setOpen] = useState(false);
 
-
     return (
         <>
             <section className="py-10 px-4 bg-gray-50 rounded-xl shadow-lg">
@@ -49,7 +48,7 @@ export default function HomeGalleryCarousel() {
                             <img
                                 src={src}
                                 alt={`Галерия ${i}`}
-                                className="rounded-xl shadow-md w-full h-64 object-cover"
+                                className="rounded-xl shadow-md w-full h-64 object-cover cursor-pointer"
                                 onClick={() => setOpen(i)}
                             />
                         </SwiperSlide>
