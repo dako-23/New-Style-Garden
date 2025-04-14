@@ -7,9 +7,9 @@ export default function OurServices() {
             <section className="py-20 px-6 md:px-10 lg:px-20">
                 <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
                     <div className="grid grid-cols-2 gap-4">
-                        <img src="/hero-slider1.jpg" alt="Почистване" className="rounded-full object-cover aspect-square w-full h-auto" />
-                        <img src="/hero-slider2.jpg" alt="Тревна площ" className="rounded-full object-cover aspect-square w-full h-auto" />
-                        <img src="/hero-slider3.jpg" alt="Дезинфекция" className="rounded-full object-cover aspect-square w-full h-auto" />
+                        <img src="/services1.jpg" alt="Почистване" className="rounded-full object-cover aspect-square w-full h-auto" />
+                        <img src="/services2.jpg" alt="Тревна площ" className="rounded-full object-cover aspect-square w-full h-auto" />
+                        <img src="/services3.jpg" alt="Дезинфекция" className="rounded-full object-cover aspect-square w-full h-auto" />
                         <img src="/hero-slider1.jpg" alt="Храсти" className="rounded-full object-cover aspect-square w-full h-auto" />
                     </div>
                     <div>

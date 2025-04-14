@@ -11,7 +11,7 @@ export default function PricesInfo() {
                 <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
                     <div>
                         <img
-                            src="/hero-slider2.jpg"
+                            src="/alpineum2.jpg"
                             alt="Озеленяване от New Style Garden"
                             className="rounded-xl object-cover w-full h-164 shadow-lg"
                         />
