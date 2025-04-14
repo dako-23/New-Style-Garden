@@ -3,6 +3,7 @@ import HeroSlider from './HeroSlider.jsx';
 import AboutUs from './AboutUs.jsx';
 import HowWeWork from './HowWeWork.jsx';
 import WhyChooseUs from './WhyChooseUs.jsx';
+import HomeGallery from './HomeGallery.jsx';
 
 const childVariants = {
     hidden: { opacity: 0, y: -50 },
@@ -49,7 +50,7 @@ export default function Home() {
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.1 }}
                     >
-                        {/* <Topics /> */}
+                        <HomeGallery />
                     </motion.div>
                     <motion.div
                         variants={childVariants}
