@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link, NavLink } from 'react-router-dom';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-import { FaChevronDown, FaLeaf, FaSeedling, FaTint } from 'react-icons/fa';
+import { FaChevronDown, FaLeaf, FaSeedling, FaTint, FaViber } from 'react-icons/fa';
 import { FaEnvelope, FaPhoneAlt, FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa';
 
 const navigation = [
@@ -49,7 +49,7 @@ export default function Navbar() {
                             <FaInstagram />
                         </a>
                         <a href="https://youtube.com" target="_blank" rel="noreferrer" className="hover:text-green-500 transition text-xl">
-                            <FaYoutube />
+                            <FaViber />
                         </a>
                     </div>
                 </div>
