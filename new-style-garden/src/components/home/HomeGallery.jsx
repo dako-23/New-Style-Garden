@@ -47,8 +47,8 @@ export default function HomeGalleryCarousel() {
                         <SwiperSlide key={i}>
                             <img
                                 src={src}
-                                alt={`Галерия ${i}`}
-                                className="rounded-xl shadow-md w-full h-64 object-cover cursor-pointer"
+                                alt={`gallery ${i}`}
+                                className="rounded-xl shadow-md w-full h-64 object-cover cursor-pointer hover:scale-96 transition duration-300"
                                 onClick={() => setOpen(i)}
                             />
                         </SwiperSlide>
