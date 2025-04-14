@@ -12,7 +12,7 @@ export default function WhyChooseUs() {
             text: 'Сплотен екип от професионалисти, преминали обучение и с отношение към работата.'
         },
         {
-            icon: <FaShieldAlt className="text-green-600 text-3xl mb-2" />, title: 'Надеждност и сигурност',
+            icon: <FaShieldAlt className="text-green-600 text-3xl mb-2" />, title: 'Сигурен партньор',
             text: 'Работим с договор и ясни условия – за вашето спокойствие.'
         },
         {
@@ -39,9 +39,9 @@ export default function WhyChooseUs() {
                     <div key={i} className="bg-gray-50 text-center px-4 shadow-lg py-4 cursor-pointer rounded-xl">
                         {b.icon}
                         <div className="flex justify-center">
-                            <h4 className="text-xl font-semibold text-gray-800 border-l-4 border-green-600 pl-4 mb-2">{b.title}</h4>
+                            <h4 className="text-lg font-semibold text-gray-800 border-l-4 border-green-600 pl-4 mb-2">{b.title}</h4>
                         </div>
-                        <p className="text-sm text-gray-600 leading-relaxed">{b.text}</p>
+                        <p className="text-mb text-gray-600 leading-relaxed">{b.text}</p>
                     </div>
                 ))}
             </div>
