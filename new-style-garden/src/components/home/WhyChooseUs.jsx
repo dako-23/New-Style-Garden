@@ -31,12 +31,16 @@ export default function WhyChooseUs() {
 
     return (
         <section className="py-20 px-6 bg-white max-w-7xl mx-auto">
-            <h2 className="text-center text-3xl font-bold text-green-800 mb-12">Защо да изберете нас?</h2>
+            <div className="flex justify-center">
+                <h2 className="text-center text-3xl font-bold text-gray-800 border-l-4 border-green-600 pl-4 mb-12">Защо да изберете нас?</h2>
+            </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
                 {benefits.map((b, i) => (
-                    <div key={i} className="text-center px-4">
+                    <div key={i} className="bg-gray-50 text-center px-4 shadow-lg py-4 cursor-pointer rounded-xl">
                         {b.icon}
-                        <h4 className="text-xl font-semibold text-gray-800 mb-2">{b.title}</h4>
+                        <div className="flex justify-center">
+                            <h4 className="text-xl font-semibold text-gray-800 border-l-4 border-green-600 pl-4 mb-2">{b.title}</h4>
+                        </div>
                         <p className="text-sm text-gray-600 leading-relaxed">{b.text}</p>
                     </div>
                 ))}

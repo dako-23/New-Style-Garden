@@ -5,7 +5,7 @@ export default function HeaderBanner({ title }) {
     return (
         <div
             className="relative w-full h-70 flex items-center justify-center text-center bg-cover bg-center "
-            style={{ backgroundImage: 'url("/page-pattern3.jpg")' }}>
+            style={{ backgroundImage: 'url("/page-pattern3.12.png")' }}>
             <div className="absolute inset-0 bg-opacity-50 z-0"></div>
 
             <div className="relative z-0 text-white">

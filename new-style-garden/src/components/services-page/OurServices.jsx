@@ -22,7 +22,7 @@ export default function OurServices() {
                             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-800 mb-6 border-l-4 border-green-600 pl-4">
                                 НАШИТЕ УСЛУГИ
                             </h2>
-                            <div className="space-y-4 text-gray-700 text-xl font-semibold py-10">
+                            <div className="space-y-4 text-gray-700 text-xl font-semibold py-10 ">
                                 В New Style Garden вярваме, че всяко зелено пространство заслужава професионална грижа, внимание към детайла и естетически подход.
                                 Затова предлагаме пълен набор от услуги, които обхващат както изграждането,
                                 така и поддръжката на зелени площи – независимо дали става дума за частен двор, бизнес обект, паркове или обществени пространства.

@@ -14,10 +14,10 @@ export default function AboutUs() {
                     />
                 </div>
                 <div>
-                    <h2 className="text-4xl font-bold text-green-700 mb-6">
+                    <h2 className="text-4xl font-bold text-gray-800 border-l-4 border-green-600 pl-4 mb-6">
                         За New Style Garden
                     </h2>
-                    <p className="text-gray-700 text-lg mb-6">
+                    <p className="text-gray-700 text-lg font-semibold mb-6">
                         Вярваме, че всяко зелено пространство заслужава индивидуално внимание и естетика. Създаваме не просто градини, а живи късчета природа, които вдъхновяват.
                     </p>
 
