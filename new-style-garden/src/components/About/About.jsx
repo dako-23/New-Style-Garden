@@ -1,10 +1,18 @@
 
-// import MapComponent from "./MapComponent.jsx";
 import { useState } from "react";
 import { motion } from 'framer-motion';
 import ContactForm from "./ContactForm.jsx";
 import HeaderBanner from "../header-banner/HeaderBanner.jsx";
 import FacebookWidget from "./FacebookWidget.jsx";
+
+const childVariants = {
+    hidden: { opacity: 0, y: -50 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.4, ease: "easeOut" }
+    }
+};
 
 export default function About() {
 
@@ -24,10 +32,12 @@ export default function About() {
             <HeaderBanner title={'Контакти'} />
             <div className="bg-main">
                 <motion.div
-                    initial={{ opacity: 0, y: 40 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, ease: "easeOut" }}
-                    className="max-w-6xl mx-auto py-16 px-6">
+                    variants={childVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.1 }}
+                    className="max-w-6xl mx-auto py-16 px-6"
+                >
 
                     <h2 className="text-3xl font-extrabold text-gray-700 text-center mb-4">
                         <span className="text-gray-700">Свържете се с нас</span>
