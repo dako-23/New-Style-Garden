@@ -13,6 +13,7 @@ import Home from "./components/home/Home.jsx";
 import IrrigationServices from "./components/irrigation/IrrigationServices.jsx";
 import GardenCareServices from "./components/garden-care/GardenCareServices.jsx";
 import LandscapingServices from "./components/landscaping/LandscapingServices.jsx";
+import PrivacyPolicy from "./components/privacy-policy/PrivacyPolicy.jsx";
 
 function App() {
 
@@ -30,8 +31,8 @@ function App() {
           <Route path="/services/landscaping" element={<LandscapingServices />} />
           <Route path="/prices" element={<Prices />} />
           <Route path="/about" element={<About />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           {/* <Route path="*" element={<NotFound />} /> */}
-          {/* <Route path="/terms-and-conditions" element={<TermsAndConditions />} /> */}
         </Routes>
         <ToastConfig />
         <Footer />
