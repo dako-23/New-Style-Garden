@@ -9,7 +9,7 @@ export default function Footer() {
             <div className="container mx-auto px-6">
                 <div className="flex flex-col md:flex-row justify-between items-center border-t border-white pt-6">
                     <div className="text-center md:text-left font-semibold mb-6 md:mb-0">
-                        <h2 className="text-xl">New Style Garden</h2>
+                        <h2 className="text-3xl">New Style Garden</h2>
                     </div>
                     <div className="flex space-x-6 text-white font-semibold text-xl">
                         <Link to="/" className="hover:text-white">Начало</Link>
@@ -19,13 +19,13 @@ export default function Footer() {
                         <Link to="/privacy-policy" className="hover:text-white">Политика за поверителност</Link>
                     </div>
                     <div className="flex space-x-4 mt-4 md:mt-0">
-                        <a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-green-500 transition text-xl">
+                        <a href="https://www.facebook.com/NewStylegarden" target="_blank" rel="noreferrer" className="hover:text-green-500 transition text-xl">
                             <FaFacebookF />
                         </a>
-                        <a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-green-500 transition text-xl">
+                        <a href="https://www.instagram.com/newstylegarden" target="_blank" rel="noreferrer" className="hover:text-green-500 transition text-xl">
                             <FaInstagram />
                         </a>
-                        <a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-green-500 transition text-xl">
+                        <a href="viber://chat?number=%2B359879914560" target="_blank" rel="noreferrer" className="hover:text-green-500 transition text-xl">
                             <FaViber />
                         </a>
                     </div>

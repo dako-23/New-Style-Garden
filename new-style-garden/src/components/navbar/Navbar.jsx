@@ -42,13 +42,13 @@ export default function Navbar() {
                         </div>
                     </div>
                     <div className="flex items-center gap-4">
-                        <a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-green-500 transition text-xl">
+                        <a href="https://www.facebook.com/NewStylegarden" target="_blank" rel="noreferrer" className="hover:text-green-500 transition text-xl">
                             <FaFacebookF />
                         </a>
-                        <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-green-500 transition text-xl">
+                        <a href="https://www.instagram.com/newstylegarden" target="_blank" rel="noreferrer" className="hover:text-green-500 transition text-xl">
                             <FaInstagram />
                         </a>
-                        <a href="https://youtube.com" target="_blank" rel="noreferrer" className="hover:text-green-500 transition text-xl">
+                        <a href="viber://chat?number=%2B359879914560" target="_blank" rel="noreferrer" className="hover:text-green-500 transition text-xl">
                             <FaViber />
                         </a>
                     </div>

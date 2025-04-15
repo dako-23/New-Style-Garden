@@ -1,5 +1,4 @@
 
-import { useState } from "react";
 import { motion } from 'framer-motion';
 import ContactForm from "./ContactForm.jsx";
 import HeaderBanner from "../header-banner/HeaderBanner.jsx";
@@ -15,17 +14,6 @@ const childVariants = {
 };
 
 export default function About() {
-
-    const [success, setSuccess] = useState('');
-    const [error, setError] = useState('');
-
-    const handleSuccess = (msg) => {
-        setSuccess(msg);
-    };
-
-    const handleError = (msg) => {
-        setError(msg);
-    };
 
     return (
         <>
@@ -49,7 +37,7 @@ export default function About() {
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 place-items-start md:place-items-center">
                         <div className="w-full md:w-[500px]">
-                            <ContactForm onSuccess={handleSuccess} onError={handleError} />
+                            <ContactForm />
                         </div>
 
                         <div className="md:ml-8">
