@@ -52,14 +52,6 @@ export default function Home() {
                     >
                         <HomeGallery />
                     </motion.div>
-                    <motion.div
-                        variants={childVariants}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, amount: 0.1 }}
-                    >
-                        {/* <LatestReviews /> */}
-                    </motion.div>
                 </div>
             </div>
         </>

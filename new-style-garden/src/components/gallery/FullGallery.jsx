@@ -1,9 +1,7 @@
 import { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
-// import gallery from '../../../public/images/gallery.json'
 import gallery from '../../images/gallery.json'
-
 
 export default function FullGallery() {
 

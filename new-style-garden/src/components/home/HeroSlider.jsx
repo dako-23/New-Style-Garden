@@ -7,7 +7,6 @@ import 'swiper/css/effect-fade';
 import { Link } from 'react-router-dom';
 import homeCarousel from '../../images/homeCarousel.json'
 
-
 export default function HeroSlider() {
     return (
         <div className="w-full h-[500px] md:h-[750px] relative">

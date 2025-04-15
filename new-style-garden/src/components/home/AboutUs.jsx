@@ -1,7 +1,6 @@
 import { FaLeaf, FaHandsHelping, FaSeedling } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-
 export default function AboutUs() {
     return (
         <section className="py-20 px-6 bg-white">
