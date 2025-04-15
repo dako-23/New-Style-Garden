@@ -5,7 +5,7 @@ export default function ToastConfig() {
     return (
         <ToastContainer
             position="top-center"
-            autoClose={2000}
+            autoClose={2500}
             hideProgressBar
             newestOnTop
             closeOnClick

@@ -46,7 +46,7 @@ export default function AboutUs() {
                         </div>
                     </div>
                     <Link to='/about'>
-                        <button className="mt-8 bg-green-700 hover:bg-green-600 text-white font-medium px-6 py-3 rounded-md shadow cursor-pointer">
+                        <button className="mt-8 bg-green-700 hover:bg-green-600 text-white font-medium px-6 py-3 rounded-full shadow cursor-pointer">
                             Свържете се с нас
                         </button>
                     </Link>
