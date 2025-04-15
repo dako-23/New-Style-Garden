@@ -3,20 +3,21 @@ import React, { lazy, Suspense } from "react";
 import ScrollToTop from "./helpers/scrollToTop.js";
 import ToastConfig from "./components/notifications/ToastConfig.jsx";
 import Spinner from "./components/loading-spinner/Spinner.jsx";
-import About from "./components/about/About.jsx";
 import Navbar from "./components/navbar/Navbar.jsx";
-import Gallery from "./components/gallery/Gallery.jsx";
-import Services from "./components/services-page/Services.jsx";
-import Prices from "./components/prices/Prices.jsx";
 import Footer from "./components/footer/Footer.jsx";
-import Home from "./components/home/Home.jsx";
-import IrrigationServices from "./components/irrigation/IrrigationServices.jsx";
-import GardenCareServices from "./components/garden-care/GardenCareServices.jsx";
-import LandscapingServices from "./components/landscaping/LandscapingServices.jsx";
-import PrivacyPolicy from "./components/privacy-policy/PrivacyPolicy.jsx";
 import FloatingButtons from "./components/floating-buttons/FloatingButtons.jsx";
-import ThankYou from "./components/notifications/ThankYou.jsx";
-import NotFound from "./components/notifications/NotFound.jsx";
+
+const Home = lazy(() => import('./components/home/Home.jsx'));
+const Gallery = lazy(() => import('./components/gallery/Gallery.jsx'));
+const Services = lazy(() => import('./components/services-page/Services.jsx'));
+const IrrigationServices = lazy(() => import('./components/irrigation/IrrigationServices.jsx'));
+const GardenCareServices = lazy(() => import('./components/garden-care/GardenCareServices.jsx'));
+const LandscapingServices = lazy(() => import('./components/landscaping/LandscapingServices.jsx'));
+const Prices = lazy(() => import('./components/prices/Prices.jsx'));
+const About = lazy(() => import('./components/About/About.jsx'));
+const PrivacyPolicy = lazy(() => import('./components/privacy-policy/PrivacyPolicy.jsx'));
+const ThankYou = lazy(() => import('./components/notifications/ThankYou.jsx'));
+const NotFound = lazy(() => import('./components/notifications/NotFound.jsx'));
 
 function App() {
 
