@@ -14,6 +14,7 @@ import IrrigationServices from "./components/irrigation/IrrigationServices.jsx";
 import GardenCareServices from "./components/garden-care/GardenCareServices.jsx";
 import LandscapingServices from "./components/landscaping/LandscapingServices.jsx";
 import PrivacyPolicy from "./components/privacy-policy/PrivacyPolicy.jsx";
+import FloatingButtons from "./components/floating-buttons/FloatingButtons.jsx";
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
           {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
         <ToastConfig />
+        <FloatingButtons />
         <Footer />
       </Suspense>
     </Router>
