@@ -3,7 +3,7 @@ import emailjs from '@emailjs/browser';
 import { FaEnvelope, FaUser, FaCommentDots, FaPhone } from 'react-icons/fa';
 import Spinner from '../loading-spinner/Spinner.jsx';
 
-export default function ContactForm({ onSuccess, onError }) {
+export default function ContactForm() {
 
     const handleSubmitContact = async (prevState, formData) => {
         const values = Object.fromEntries(formData);
@@ -13,22 +13,23 @@ export default function ContactForm({ onSuccess, onError }) {
                 'service_finuo7b',
                 'template_9s5cp6p',
                 {
+                    title: 'New Style Garden | Ново запитване',
                     name: values.name,
                     email: values.email,
                     message: values.message,
+                    phone: values.phone
                 },
                 'zhdhBPBbfAsc09QO1'
             );
-            values.title = '',
                 values.name = '',
                 values.email = '',
                 values.message = '',
                 values.phone = '',
 
-                onSuccess('Email sent successfully!');
+                console.log('Email sent successfully!');
 
         } catch (err) {
-            onError('Error sending email.');
+            // onError('Error sending email.');
         }
 
         return values;
