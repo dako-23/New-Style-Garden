@@ -1,46 +1,11 @@
-import { useActionState } from 'react';
-import emailjs from '@emailjs/browser';
 import { FaEnvelope, FaUser, FaCommentDots, FaPhone } from 'react-icons/fa';
 import Spinner from '../loading-spinner/Spinner.jsx';
+import { Link } from 'react-router-dom';
+import useContactForm from '../../hooks/useContactForm.js';
 
 export default function ContactForm() {
 
-    const handleSubmitContact = async (prevState, formData) => {
-        const values = Object.fromEntries(formData);
-
-        try {
-            await emailjs.send(
-                'service_finuo7b',
-                'template_9s5cp6p',
-                {
-                    title: 'New Style Garden | Ново запитване',
-                    name: values.name,
-                    email: values.email,
-                    message: values.message,
-                    phone: values.phone
-                },
-                'zhdhBPBbfAsc09QO1'
-            );
-                values.name = '',
-                values.email = '',
-                values.message = '',
-                values.phone = '',
-
-                console.log('Email sent successfully!');
-
-        } catch (err) {
-            // onError('Error sending email.');
-        }
-
-        return values;
-    };
-
-    const [values, contactAction, isPending] = useActionState(handleSubmitContact, {
-        name: '',
-        email: '',
-        message: '',
-        phone: '',
-    });
+    const { values, contactAction, isPending } = useContactForm()
 
     return (
         <>
@@ -63,7 +28,7 @@ export default function ContactForm() {
                             <input
                                 type="text"
                                 name="name"
-                                placeholder="Вашето име"
+                                placeholder="Вашето име*"
                                 className="w-full bg-transparent outline-none"
                                 defaultValue={values.name}
                             />
@@ -84,7 +49,7 @@ export default function ContactForm() {
                             <FaCommentDots className="text-gray-500 mr-2 mt-1" />
                             <textarea
                                 name="message"
-                                placeholder="Вашето запитване..."
+                                placeholder="Вашето запитване...*"
                                 className="w-full bg-transparent outline-none resize-none h-24"
                                 defaultValue={values.message}
                             />
@@ -95,10 +60,21 @@ export default function ContactForm() {
                             <input
                                 type="tel"
                                 name="phone"
-                                placeholder="Телефон"
+                                placeholder="Телефон*"
                                 className="w-full bg-transparent outline-none"
                                 defaultValue={values.phone}
                             />
+                        </div>
+                        <div className="flex items-center space-x-2 mt-2">
+                            <input
+                                type="checkbox"
+                                name="agree"
+                                id="agreePrivacy"
+                                className="w-4 h-4 text-lime-600 border-gray-300 rounded focus:ring-lime-500"
+                            />
+                            <label htmlFor="agreeToTerms" className="text-sm text-gray-700">
+                                Съгласен съм с <Link to="/terms-and-conditions" className="text-green-700 font-semibold underline">политиката за поверителност*</Link>
+                            </label>
                         </div>
                         <button
                             type="submit"
@@ -110,7 +86,6 @@ export default function ContactForm() {
                     </div>
                 </form>
             }
-
         </>
     );
 
