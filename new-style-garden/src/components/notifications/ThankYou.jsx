@@ -7,12 +7,12 @@ export default function ThankYou() {
         <HeaderBanner title={'Благодарим Ви!'} />
         <div className="bg-main h-171 flex flex-col justify-center items-center text-center px-6">
             <motion.h1
-                className="text-4xl md:text-3xl font-bold text-gray-700 drop-shadow mb-8 py-4"
+                className="text-2xl md:text-3xl font-bold text-gray-700 drop-shadow mb-8 py-4 max-w-xl"
                 initial={{ opacity: 0, y: -30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7 }}
             >
-                🌿 Вашето запитване вече пониква в нашата градина – скоро ще разцъфне като персонална оферта!🌿
+                🌿 Вашето запитване вече пониква в нашата градина – скоро ще разцъфне като персонална оферта! 🌿
             </motion.h1>
 
             <motion.p

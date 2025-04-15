@@ -7,7 +7,7 @@ const steps = [
     { icon: <FaEye />, label: 'Безплатен оглед' },
     { icon: <FaClipboardList />, label: 'Изпращаме оферта' },
     { icon: <FaCheckCircle />, label: 'Вие приемате' },
-    { icon: <FaTools />, label: 'Реализираме проекта' },
+    { icon: <FaTools />, label: 'Реализираме' },
     { icon: <FaSmile />, label: 'Оставате доволни' },
 ];
 
@@ -28,7 +28,7 @@ export default function HowWeWork() {
 
                     <motion.svg
                         viewBox="0 0 1200 200"
-                        className="hidden md:flex w-full h-62 absolute top-[30px] left-0 z-0"
+                        className="hidden md:flex w-full h-51.5 absolute top-[30px] left-0 z-0"
                     >
                         <motion.path
                             d="M0,100 Q100,0 200,100 T400,100 T600,100 T800,100 T1000,100 T1200,100"
@@ -43,14 +43,13 @@ export default function HowWeWork() {
                         />
                     </motion.svg>
 
-
                     <div className="hidden md:flex justify-between items-center relative z-10 max-w-6xl mx-auto mt-20">
                         {steps.map((step, i) => {
-                            const iconY = i % 2 === 0 ? '-translate-y-19' : 'translate-y-12';
+                            const iconY = i % 2 === 0 ? '-translate-y-21' : 'translate-y-4';
                             return (
                                 <motion.div
                                     key={i}
-                                    className={`text-center -mx-20 w-12 relative flex flex-col items-center ${iconY}`}
+                                    className={`text-center w-34 relative flex flex-col items-center ${iconY}`}
                                     initial={{ opacity: 0, y: 40 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, delay: i * 0.2 }}

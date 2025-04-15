@@ -3,16 +3,16 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import 'swiper/css';
-import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import { useState } from 'react';
-import gallery from '../../images/gallery.json'
+import homeGallery from '../../images/homeGallery.json'
 
 export default function HomeGalleryCarousel() {
 
     const [open, setOpen] = useState(false);
+    const [index, setIndex] = useState(0);
 
     return (
         <>
@@ -30,17 +30,20 @@ export default function HomeGalleryCarousel() {
                     spaceBetween={16}
                     slidesPerView={1}
                     breakpoints={{
-                        640: { slidesPerView: 2 },
+                        640: { slidesPerView: 1 },
                         1024: { slidesPerView: 3 },
                     }}
                 >
-                    {gallery.map((src, i) => (
+                    {homeGallery.map((src, i) => (
                         <SwiperSlide key={i}>
                             <img
                                 src={src}
                                 alt={`gallery ${i}`}
-                                className="rounded-xl shadow-md w-full h-64 object-cover cursor-pointer hover:scale-96 transition duration-300"
-                                onClick={() => setOpen(i)}
+                                className="rounded-xl shadow-md w-full h-64 object-cover cursor-pointer hover:scale-95 transition duration-300"
+                                onClick={() => {
+                                    setOpen(true)
+                                    setIndex(i)
+                                }}
                             />
                         </SwiperSlide>
                     ))}
@@ -49,8 +52,8 @@ export default function HomeGalleryCarousel() {
             <Lightbox
                 open={open !== false}
                 close={() => setOpen(false)}
-                index={open}
-                slides={gallery.map((src) => ({ src }))}
+                index={index}
+                slides={homeGallery.map((src) => ({ src }))}
                 styles={{
                     container: {
                         backgroundColor: "rgba(0,0,0,0.85)" // по-мек фон

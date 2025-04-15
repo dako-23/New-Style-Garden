@@ -44,7 +44,7 @@ export default function ScrollBtn() {
                     className="fixed bottom-6 left-6 z-50 p-3 rounded-full bg-green-700 hover:bg-green-600 text-white shadow-lg transition cursor-pointer backdrop-blur-sm"
                     aria-label="Scroll to top"
                 >
-                    <FaArrowUp size={45} />
+                    <FaArrowUp size={35} />
                 </motion.button>
             )}
         </>
