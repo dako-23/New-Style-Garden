@@ -27,8 +27,8 @@ export default function HomeGalleryCarousel() {
                     pagination={false}
                     autoplay={{ delay: 3000 }}
                     loop={true}
-                    spaceBetween={20}
-                    slidesPerView={1.2}
+                    spaceBetween={16}
+                    slidesPerView={1}
                     breakpoints={{
                         640: { slidesPerView: 2 },
                         1024: { slidesPerView: 3 },
