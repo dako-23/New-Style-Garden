@@ -16,6 +16,7 @@ import LandscapingServices from "./components/landscaping/LandscapingServices.js
 import PrivacyPolicy from "./components/privacy-policy/PrivacyPolicy.jsx";
 import FloatingButtons from "./components/floating-buttons/FloatingButtons.jsx";
 import ThankYou from "./components/notifications/ThankYou.jsx";
+import NotFound from "./components/notifications/NotFound.jsx";
 
 function App() {
 
@@ -35,7 +36,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/thank-you" element={<ThankYou />} />
-          {/* <Route path="*" element={<NotFound />} /> */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <ToastConfig />
         <FloatingButtons />
