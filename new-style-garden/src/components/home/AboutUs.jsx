@@ -8,7 +8,7 @@ export default function AboutUs() {
             <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
                 <div>
                     <img
-                        src="/car.jpg"
+                        src="https://res.cloudinary.com/dgvzzts4y/image/upload/v1744712062/car_c2ikkp.jpg"
                         alt="Екипът на New Style Garden"
                         className="rounded-xl shadow-xl w-full object-cover max-h-[450px]"
                     />

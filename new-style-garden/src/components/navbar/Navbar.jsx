@@ -68,7 +68,7 @@ export default function Navbar() {
             >
                 <div className="max-w-7xl mx-auto px-4 h-17 flex items-center justify-between text-xl">
                     <Link onClick={() => setIsMobileMenuOpen(false)} to="/">
-                        <img src="/navbar-logo.png" alt="Logo" className="w-40 h-auto" />
+                        <img src="https://res.cloudinary.com/dgvzzts4y/image/upload/v1744705862/navbar-logo_utcdku.png" alt="Logo" className="w-40 h-auto" />
                     </Link>
                     <div className="md:hidden flex">
                         <button onClick={toggleMobileMenu}>

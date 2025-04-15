@@ -7,10 +7,10 @@ export default function OurServices() {
             <section className="py-20 px-6 md:px-10 lg:px-20">
                 <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
                     <div className="grid grid-cols-2 gap-4">
-                        <img src="/services1.jpg" alt="Почистване" className="rounded-full object-cover aspect-square w-full h-auto" />
-                        <img src="/services2.jpg" alt="Тревна площ" className="rounded-full object-cover aspect-square w-full h-auto" />
-                        <img src="/services3.jpg" alt="Дезинфекция" className="rounded-full object-cover aspect-square w-full h-auto" />
-                        <img src="/hero-slider1.jpg" alt="Храсти" className="rounded-full object-cover aspect-square w-full h-auto" />
+                        <img src="https://res.cloudinary.com/dgvzzts4y/image/upload/v1744708201/IMG_5872_rf4k4s.jpg" alt="Почистване" className="rounded-full object-cover aspect-square w-full h-auto" />
+                        <img src="https://res.cloudinary.com/dgvzzts4y/image/upload/v1744708186/IMG_5940_rjg0ji.jpg" alt="Тревна площ" className="rounded-full object-cover aspect-square w-full h-auto" />
+                        <img src="https://res.cloudinary.com/dgvzzts4y/image/upload/v1744708182/IMG_5975_hzg4tf.jpg" alt="Дезинфекция" className="rounded-full object-cover aspect-square w-full h-auto" />
+                        <img src="https://res.cloudinary.com/dgvzzts4y/image/upload/v1744711784/hero-slider1_xtok1s.jpg" alt="Храсти" className="rounded-full object-cover aspect-square w-full h-auto" />
                     </div>
                     <div>
                         <h2 className="text-3xl md:text-4xl font-extrabold text-gray-800 mb-6 border-l-4 border-green-600 pl-4">
