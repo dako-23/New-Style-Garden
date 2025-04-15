@@ -8,15 +8,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import { useState } from 'react';
-
-const images = [
-    '/hero-slider1.jpg',
-    '/hero-slider2.jpg',
-    '/hero-slider3.jpg',
-    '/hero-slider1.jpg',
-    '/hero-slider2.jpg',
-    '/hero-slider3.jpg',
-];
+import gallery from '../../../public/images/gallery.json'
 
 export default function HomeGalleryCarousel() {
 
@@ -32,7 +24,7 @@ export default function HomeGalleryCarousel() {
                 <Swiper
                     modules={[Navigation, Pagination, Autoplay]}
                     navigation
-                    pagination={{ clickable: true }}
+                    pagination={false}
                     autoplay={{ delay: 3000 }}
                     loop={true}
                     spaceBetween={20}
@@ -41,9 +33,8 @@ export default function HomeGalleryCarousel() {
                         640: { slidesPerView: 2 },
                         1024: { slidesPerView: 3 },
                     }}
-                    className=""
                 >
-                    {images.map((src, i) => (
+                    {gallery.map((src, i) => (
                         <SwiperSlide key={i}>
                             <img
                                 src={src}
@@ -59,7 +50,7 @@ export default function HomeGalleryCarousel() {
                 open={open !== false}
                 close={() => setOpen(false)}
                 index={open}
-                slides={images.map((src) => ({ src }))}
+                slides={gallery.map((src) => ({ src }))}
                 styles={{
                     container: {
                         backgroundColor: "rgba(0,0,0,0.85)" // по-мек фон

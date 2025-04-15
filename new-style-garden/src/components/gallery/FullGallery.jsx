@@ -1,24 +1,18 @@
 import { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
+import gallery from '../../../public/images/gallery.json'
 
-const images = [
-    '/hero-slider1.jpg',
-    '/hero-slider2.jpg',
-    '/hero-slider3.jpg',
-    '/hero-slider1.jpg',
-    '/hero-slider2.jpg',
-    '/hero-slider3.jpg',
-];
+
 export default function FullGallery() {
 
     const [open, setOpen] = useState(false);
 
     return (
         <>
-            <section className="py-12 px-6 max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                    {images.map((src, i) => (
+            <section className="bg-gray-100 py-12 mx-auto">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                    {gallery.map((src, i) => (
                         <img
                             key={i}
                             onClick={() => setOpen(i)}
@@ -33,7 +27,7 @@ export default function FullGallery() {
                 open={open !== false}
                 close={() => setOpen(false)}
                 index={open}
-                slides={images.map((src) => ({ src }))}
+                slides={gallery.map((src) => ({ src }))}
                 styles={{
                     container: {
                         backgroundColor: "rgba(0,0,0,0.85)"

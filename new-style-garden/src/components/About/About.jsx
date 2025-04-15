@@ -40,7 +40,7 @@ export default function About() {
                             <ContactForm />
                         </div>
 
-                        <div className="md:ml-8">
+                        <div className="md:ml-8 mx-auto">
                             <FacebookWidget />
                         </div>
                     </div>

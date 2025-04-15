@@ -5,6 +5,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import { Link } from 'react-router-dom';
+import homeCarousel from '../../../public/images/homeCarousel.json'
 
 
 export default function HeroSlider() {
@@ -19,12 +20,13 @@ export default function HeroSlider() {
                 loop={true}
                 className="w-full h-full"
             >
-                {[1, 2, 3].map((n) => (
-                    <SwiperSlide key={n}>
+                {homeCarousel.map((image, i) => (
+                    <SwiperSlide key={i}>
                         <div className="w-full h-full relative">
                             <img
-                                src={`/hero-slider${n}.jpg`}
-                                alt={`slide ${n}`}
+                                src={image}
+                                alt={`slide ${i}`}
+                                key={i}
                                 className="w-full h-full object-cover"
                             />
                             <div className="absolute inset-0  bg-opacity-30 flex items-center justify-center">

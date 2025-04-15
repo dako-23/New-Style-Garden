@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link, NavLink } from 'react-router-dom';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { FaChevronDown, FaLeaf, FaSeedling, FaTint, FaViber } from 'react-icons/fa';
-import { FaEnvelope, FaPhoneAlt, FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaEnvelope, FaPhoneAlt, FaFacebookF, FaInstagram } from 'react-icons/fa';
 
 const navigation = [
     { name: 'Начало', path: '/' },
@@ -127,7 +127,7 @@ export default function Navbar() {
                                     <NavLink
                                         to={nav.path}
                                         onClick={() => setIsMobileMenuOpen(false)}
-                                        className="block py-2 text-base text-xl font-medium"
+                                        className="block text-base text-xl font-medium"
                                     >
                                         {nav.name}
                                     </NavLink>
