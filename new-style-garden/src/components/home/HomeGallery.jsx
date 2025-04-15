@@ -8,7 +8,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import { useState } from 'react';
-import gallery from '../../../public/images/gallery.json'
+import gallery from '../../images/gallery.json'
 
 export default function HomeGalleryCarousel() {
 

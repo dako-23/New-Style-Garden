@@ -26,7 +26,7 @@
 
 @layer utilities {
     .bg-main {
-        background-image: url('/main-bg.svg');
+        background-image: url('https://res.cloudinary.com/dgvzzts4y/image/upload/v1744713336/main-bg_qxv2dj.svg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -34,7 +34,7 @@
     }
 
     .bg-main-blue {
-        background-image: url('/main-bg-blue.svg');
+        background-image: url('https://res.cloudinary.com/dgvzzts4y/image/upload/v1744713337/main-bg-blue_gzhc0t.svg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -42,7 +42,7 @@
     }
 
     .bg-main-brown {
-        background-image: url('/main-bg-brown.svg');
+        background-image: url('https://res.cloudinary.com/dgvzzts4y/image/upload/v1744713337/main-bg-brown_siimtv.svg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;

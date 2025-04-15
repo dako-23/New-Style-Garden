@@ -5,7 +5,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import { Link } from 'react-router-dom';
-import homeCarousel from '../../../public/images/homeCarousel.json'
+import homeCarousel from '../../images/homeCarousel.json'
 
 
 export default function HeroSlider() {
