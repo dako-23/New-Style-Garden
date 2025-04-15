@@ -73,7 +73,7 @@ export default function ContactForm() {
                                 className="w-4 h-4 text-lime-600 border-gray-300 rounded focus:ring-lime-500"
                             />
                             <label htmlFor="agreeToTerms" className="text-sm text-gray-700">
-                                Съгласен съм с <Link to="/terms-and-conditions" className="text-green-700 font-semibold underline">политиката за поверителност*</Link>
+                                Съгласен съм с <Link to="/privacy-policy" className="text-green-700 font-semibold underline">политиката за поверителност*</Link>
                             </label>
                         </div>
                         <button
