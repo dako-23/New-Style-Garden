@@ -5,7 +5,7 @@ export default function FadeSpinner() {
     return (
         <div className="flex flex-col justify-center items-center h-screen bg-white gap-12 z-50">
             <img
-                src="https://res.cloudinary.com/dgvzzts4y/image/upload/v1744713337/main-logo_b5sax8.svg"
+                src="https://res.cloudinary.com/dgvzzts4y/image/upload/v1744705862/navbar-logo_utcdku.png"
                 alt="New Style Garden"
                 className="w-60"
             />
