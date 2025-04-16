@@ -1,18 +1,33 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import { useState } from 'react';
-import homeGallery from '../../images/homeGallery.json'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { useHomeSlider } from '../../api/homeSliderApi.js';
+import { AdvancedImage } from '@cloudinary/react';
+import { Cloudinary } from '@cloudinary/url-gen/index';
+import { fill } from "@cloudinary/url-gen/actions/resize";
+import { auto } from "@cloudinary/url-gen/qualifiers/format";
+import { quality } from "@cloudinary/url-gen/actions/delivery";
+import Lightbox from "yet-another-react-lightbox";
 
 export default function HomeGalleryCarousel() {
 
+    const { homeSlider } = useHomeSlider()
+
     const [open, setOpen] = useState(false);
     const [index, setIndex] = useState(0);
+
+    const canLoop = homeSlider.length >= 1;
+
+    const cld = new Cloudinary({
+        cloud: {
+            cloudName: 'dgvzzts4y'
+        }
+    });
 
     return (
         <>
@@ -26,7 +41,7 @@ export default function HomeGalleryCarousel() {
                     navigation
                     pagination={false}
                     autoplay={{ delay: 3000 }}
-                    loop={true}
+                    loop={canLoop}
                     spaceBetween={16}
                     slidesPerView={1}
                     breakpoints={{
@@ -34,15 +49,19 @@ export default function HomeGalleryCarousel() {
                         1024: { slidesPerView: 3 },
                     }}
                 >
-                    {homeGallery.map((src, i) => (
+                    {homeSlider.map((src, i) => (
                         <SwiperSlide key={i}>
-                            <img
-                                src={src}
-                                alt={`gallery ${i}`}
+                            <AdvancedImage
+                                cldImg={cld
+                                    .image(src)
+                                    .format(auto())
+                                    .delivery(quality("auto"))
+                                    .resize(fill().width(800).height(600))
+                                }
                                 className="rounded-xl shadow-md w-full h-64 object-cover cursor-pointer hover:scale-95 transition duration-300"
                                 onClick={() => {
-                                    setOpen(true)
-                                    setIndex(i)
+                                    setOpen(true);
+                                    setIndex(i);
                                 }}
                             />
                         </SwiperSlide>
@@ -53,7 +72,9 @@ export default function HomeGalleryCarousel() {
                 open={open !== false}
                 close={() => setOpen(false)}
                 index={index}
-                slides={homeGallery.map((src) => ({ src }))}
+                slides={homeSlider.map((id) => ({
+                    src: cld.image(id).toURL()
+                }))}
                 styles={{
                     container: {
                         backgroundColor: "rgba(0,0,0,0.85)" // по-мек фон
