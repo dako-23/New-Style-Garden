@@ -1,7 +1,7 @@
 import { FaEnvelope, FaUser, FaCommentDots, FaPhone } from 'react-icons/fa';
-import Spinner from '../loading-spinner/Spinner.jsx';
 import { Link } from 'react-router-dom';
 import useContactForm from '../../hooks/useContactForm.js';
+import SyncSpinner from '../loading-spinner/SyncSpinner.jsx';
 
 export default function ContactForm() {
 
@@ -11,7 +11,7 @@ export default function ContactForm() {
         <>
             {isPending
                 ?
-                <Spinner />
+                <SyncSpinner />
                 :
                 <form
                     action={contactAction}

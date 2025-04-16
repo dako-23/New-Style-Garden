@@ -2,10 +2,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React, { lazy, Suspense } from "react";
 import ScrollToTop from "./helpers/scrollToTop.js";
 import ToastConfig from "./components/notifications/ToastConfig.jsx";
-import Spinner from "./components/loading-spinner/Spinner.jsx";
 import Navbar from "./components/navbar/Navbar.jsx";
 import Footer from "./components/footer/Footer.jsx";
 import FloatingButtons from "./components/floating-buttons/FloatingButtons.jsx";
+import FadeSpinner from "./components/loading-spinner/FadeSpinner.jsx";
 
 const Home = lazy(() => import('./components/home/Home.jsx'));
 const Gallery = lazy(() => import('./components/gallery/Gallery.jsx'));
@@ -23,7 +23,7 @@ function App() {
 
   return (
     <Router>
-      <Suspense fallback={<Spinner />}>
+      <Suspense fallback={<FadeSpinner />}>
         <ScrollToTop />
         <Navbar />
         <Routes>
