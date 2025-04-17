@@ -24,7 +24,6 @@ export default function Home() {
                 url="https://newstylegarden.com/"
                 image="https://res.cloudinary.com/dgvzzts4y/image/upload/v1744802263/gallery/hero-slider1_hiurqf_xcibzq.jpg"
             />
-            <div className='bg-main min-h-screen overflow-hidden pb-20'>
                 <motion.div
                     variants={childVariants}
                     initial="hidden"
@@ -33,6 +32,7 @@ export default function Home() {
                 >
                     <HeroSlider />
                 </motion.div>
+            <div className='bg-main min-h-screen overflow-hidden pb-20'>
                 <div className="container mx-auto px-4">
                     <motion.div
                         variants={childVariants}
