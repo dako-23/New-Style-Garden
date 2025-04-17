@@ -54,7 +54,7 @@ export default function HeroSlider() {
                                     .format(auto())
                                     .delivery(quality("auto"))
                                 }
-                                alt={`slide ${i}`}
+                                alt={'Градина, изградена от New Style Garden'}
                                 key={i}
                                 className="w-full h-full object-cover"
                             />

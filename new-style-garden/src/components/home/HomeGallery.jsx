@@ -58,6 +58,7 @@ export default function HomeGalleryCarousel() {
                                     .delivery(quality("auto"))
                                     .resize(fill().width(800).height(600))
                                 }
+                                alt={'Снимки от озеленяване на наши обекти'}
                                 className="rounded-xl shadow-md w-full h-64 object-cover cursor-pointer hover:scale-95 transition duration-300"
                                 onClick={() => {
                                     setOpen(true);

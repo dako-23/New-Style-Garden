@@ -3,12 +3,12 @@ import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 
 const steps = [
-    { icon: <FaPhone />, label: 'Свързвате се с нас' },
-    { icon: <FaEye />, label: 'Безплатен оглед' },
-    { icon: <FaClipboardList />, label: 'Изпращаме оферта' },
-    { icon: <FaCheckCircle />, label: 'Вие приемате' },
-    { icon: <FaTools />, label: 'Реализираме' },
-    { icon: <FaSmile />, label: 'Оставате доволни' },
+    { icon: <FaPhone aria-hidden="true" />, label: 'Свързвате се с нас' },
+    { icon: <FaEye aria-hidden="true" />, label: 'Безплатен оглед' },
+    { icon: <FaClipboardList aria-hidden="true" />, label: 'Изпращаме оферта' },
+    { icon: <FaCheckCircle aria-hidden="true" />, label: 'Вие приемате' },
+    { icon: <FaTools aria-hidden="true" />, label: 'Реализираме' },
+    { icon: <FaSmile aria-hidden="true" />, label: 'Оставате доволни' },
 ];
 
 export default function HowWeWork() {

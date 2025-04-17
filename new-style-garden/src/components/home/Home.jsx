@@ -4,6 +4,7 @@ import AboutUs from './AboutUs.jsx';
 import HowWeWork from './HowWeWork.jsx';
 import WhyChooseUs from './WhyChooseUs.jsx';
 import HomeGallery from './HomeGallery.jsx';
+import SEO from '../seo/SEO.JSX';
 
 const childVariants = {
     hidden: { opacity: 0, y: -50 },
@@ -17,6 +18,12 @@ const childVariants = {
 export default function Home() {
     return (
         <>
+            <SEO
+                title="New Style Garden | Озеленяване и поддръжка на градини в София"
+                description="Професионално озеленяване, изграждане на поливни системи, затревяване с чим и семена. Доверете се на New Style Garden – естетика, природа и спокойствие в градината ви."
+                url="https://newstylegarden.com/"
+                image="https://res.cloudinary.com/dgvzzts4y/image/upload/v1744802263/gallery/hero-slider1_hiurqf_xcibzq.jpg"
+            />
             <div className='bg-main min-h-screen overflow-hidden pb-20'>
                 <motion.div
                     variants={childVariants}

@@ -4,27 +4,27 @@ export default function WhyChooseUs() {
 
     const benefits = [
         {
-            icon: <FaCheckCircle className="text-green-600 text-3xl mb-2" />, title: 'Дългогодишен опит',
+            icon: <FaCheckCircle className="text-green-600 text-3xl mb-2" aria-hidden="true" />, title: 'Дългогодишен опит',
             text: 'Опит в сферата на озеленяването и поддръжката, натрупан с години практика.'
         },
         {
-            icon: <FaUserTie className="text-green-600 text-3xl mb-2" />, title: 'Професионален екип',
+            icon: <FaUserTie className="text-green-600 text-3xl mb-2" aria-hidden="true" />, title: 'Професионален екип',
             text: 'Сплотен екип от професионалисти, преминали обучение и с отношение към работата.'
         },
         {
-            icon: <FaShieldAlt className="text-green-600 text-3xl mb-2" />, title: 'Сигурен партньор',
+            icon: <FaShieldAlt className="text-green-600 text-3xl mb-2" aria-hidden="true" />, title: 'Сигурен партньор',
             text: 'Работим с договор и ясни условия – за вашето спокойствие.'
         },
         {
-            icon: <FaSmile className="text-green-600 text-3xl mb-2" />, title: 'Доволни клиенти',
+            icon: <FaSmile className="text-green-600 text-3xl mb-2" aria-hidden="true" />, title: 'Доволни клиенти',
             text: 'Над 500 доволни клиенти – нашата работа говори сама за себе си.'
         },
         {
-            icon: <FaTools className="text-green-600 text-3xl mb-2" />, title: 'Модерно оборудване',
+            icon: <FaTools className="text-green-600 text-3xl mb-2" aria-hidden="true" />, title: 'Модерно оборудване',
             text: 'Използваме техника и препарати от най-висок клас за качествени резултати.'
         },
         {
-            icon: <FaClipboardList className="text-green-600 text-3xl mb-2" />, title: 'Индивидуален подход',
+            icon: <FaClipboardList className="text-green-600 text-3xl mb-2" aria-hidden="true" />, title: 'Индивидуален подход',
             text: 'Всяка градина и клиент са различни – подходът ни също.'
         },
     ];
