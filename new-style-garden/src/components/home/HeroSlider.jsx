@@ -10,7 +10,9 @@ import { AdvancedImage } from '@cloudinary/react';
 import { Cloudinary } from '@cloudinary/url-gen/index';
 import { auto } from "@cloudinary/url-gen/qualifiers/format";
 import { quality } from "@cloudinary/url-gen/actions/delivery";
+import { fill } from "@cloudinary/url-gen/actions/resize";
 import { ClipLoader } from 'react-spinners';
+import { motion } from 'framer-motion';
 
 export default function HeroSlider() {
     const { heroSliderImages, isLoading } = useHeroSliderImages();
@@ -53,13 +55,23 @@ export default function HeroSlider() {
                                     .image(image)
                                     .format(auto())
                                     .delivery(quality("auto"))
+                                    .resize(fill().width(3840).height(2160))
                                 }
                                 alt={'Градина, изградена от New Style Garden'}
                                 key={i}
                                 className="w-full h-full object-cover"
                             />
                             <div className="absolute inset-0  bg-opacity-30 flex items-center justify-center">
-                                <div className="text-center text-white">
+                                <motion.div
+                                    initial={{ opacity: 0, scale: 0.95, y: 40 }}
+                                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                                    transition={{
+                                        type: "spring",
+                                        stiffness: 80,
+                                        damping: 12,
+                                        delay: 0.2,
+                                    }}
+                                    className="text-center text-white">
                                     <h2 className="text-3xl md:text-5xl text-strong-shadow font-bold drop-shadow-lg mb-4">
                                         Добре дошли в New Style Garden
                                     </h2>
@@ -72,8 +84,7 @@ export default function HeroSlider() {
                                             Разгледай услугите
                                         </button>
                                     </Link>
-
-                                </div>
+                                </motion.div>
                             </div>
                         </div>
                     </SwiperSlide>
