@@ -30,6 +30,7 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        min-height: 245vh;
         /* background-color: rgb(243, 243, 243) !important; */
     }
 

@@ -17,8 +17,15 @@ const childVariants = {
 export default function Home() {
     return (
         <>
-            <div className='bg-main'>
-                <HeroSlider />
+            <div className='bg-main min-h-screen'>
+                <motion.div
+                    variants={childVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.1 }}
+                >
+                    <HeroSlider />
+                </motion.div>
                 <div className="container mx-auto px-4">
                     <motion.div
                         variants={childVariants}
