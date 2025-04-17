@@ -6,7 +6,7 @@ import 'swiper/css/effect-fade';
 import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import { useHomeSlider } from '../../api/homeSliderApi.js';
+import { useHomeGallery } from '../../api/homeGalleryApi.js';
 import { AdvancedImage } from '@cloudinary/react';
 import { Cloudinary } from '@cloudinary/url-gen/index';
 import { fill } from "@cloudinary/url-gen/actions/resize";
@@ -16,12 +16,12 @@ import Lightbox from "yet-another-react-lightbox";
 
 export default function HomeGalleryCarousel() {
 
-    const { homeSlider } = useHomeSlider()
+    const { homeGallery } = useHomeGallery()
 
     const [open, setOpen] = useState(false);
     const [index, setIndex] = useState(0);
 
-    const canLoop = homeSlider.length >= 1;
+    const canLoop = homeGallery.length >= 1;
 
     const cld = new Cloudinary({
         cloud: {
@@ -49,7 +49,7 @@ export default function HomeGalleryCarousel() {
                         1024: { slidesPerView: 3 },
                     }}
                 >
-                    {homeSlider.map((src, i) => (
+                    {homeGallery.map((src, i) => (
                         <SwiperSlide key={i}>
                             <AdvancedImage
                                 cldImg={cld
@@ -72,7 +72,7 @@ export default function HomeGalleryCarousel() {
                 open={open !== false}
                 close={() => setOpen(false)}
                 index={index}
-                slides={homeSlider.map((id) => ({
+                slides={homeGallery.map((id) => ({
                     src: cld.image(id).toURL()
                 }))}
                 styles={{

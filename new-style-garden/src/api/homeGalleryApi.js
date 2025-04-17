@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 
 const API_URL = 'https://server-tgjz.onrender.com/new-style-garden-gallery';
 
-export const useHomeSlider = () => {
-    const [homeSlider, setHomeSlider] = useState([]);
+export const useHomeGallery = () => {
+    const [homeGallery, setHomeGallery] = useState([]);
 
-    const getHomeSlider = async () => {
+    const getHomeGallery = async () => {
         try {
             const res = await fetch(`${API_URL}/home-slider`);
             const data = await res.json();
@@ -15,7 +15,7 @@ export const useHomeSlider = () => {
                 return match ? match[1] : null;
             }).filter(Boolean);
 
-            setHomeSlider(parsed);
+            setHomeGallery(parsed);
 
         } catch (err) {
             console.log(err.message);
@@ -23,8 +23,8 @@ export const useHomeSlider = () => {
     }
 
     useEffect(() => {
-        getHomeSlider();
+        getHomeGallery();
     }, []);
 
-    return { homeSlider };
+    return { homeGallery };
 }

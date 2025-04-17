@@ -5,9 +5,35 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import { Link } from 'react-router-dom';
-import homeCarousel from '../../images/homeCarousel.json'
+import { useHeroSliderImages } from '../../api/heroSliderApi.js';
+import { AdvancedImage } from '@cloudinary/react';
+import { Cloudinary } from '@cloudinary/url-gen/index';
+import { auto } from "@cloudinary/url-gen/qualifiers/format";
+import { quality } from "@cloudinary/url-gen/actions/delivery";
+import { ClipLoader } from 'react-spinners';
 
 export default function HeroSlider() {
+    const { heroSliderImages, isLoading } = useHeroSliderImages();
+
+    const cld = new Cloudinary({
+        cloud: {
+            cloudName: 'dgvzzts4y'
+        }
+    });
+
+    const canLoop = heroSliderImages.length >= 1;
+
+    if (isLoading || heroSliderImages.length === 0) {
+        return (
+            <div className="w-full h-[500px] md:h-[750px] flex items-center justify-center">
+                <ClipLoader
+                    color="#15803d"
+                    size={50}
+                    speedMultiplier={1.2} />
+            </div>
+        );
+    }
+
     return (
         <div className="w-full h-[500px] md:h-[750px] relative">
             <Swiper
@@ -16,14 +42,18 @@ export default function HeroSlider() {
                 pagination={{ clickable: true, }}
                 autoplay={{ delay: 2800, disableOnInteraction: false }}
                 effect="fade"
-                loop={true}
+                loop={canLoop}
                 className="w-full h-full"
             >
-                {homeCarousel.map((image, i) => (
+                {heroSliderImages.map((image, i) => (
                     <SwiperSlide key={i}>
                         <div className="w-full h-full relative">
-                            <img
-                                src={image}
+                            <AdvancedImage
+                                cldImg={cld
+                                    .image(image)
+                                    .format(auto())
+                                    .delivery(quality("auto"))
+                                }
                                 alt={`slide ${i}`}
                                 key={i}
                                 className="w-full h-full object-cover"
