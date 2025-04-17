@@ -17,7 +17,7 @@ const childVariants = {
 export default function Home() {
     return (
         <>
-            <div className='bg-main min-h-screen'>
+            <div className='bg-main min-h-screen overflow-hidden pb-20'>
                 <motion.div
                     variants={childVariants}
                     initial="hidden"
