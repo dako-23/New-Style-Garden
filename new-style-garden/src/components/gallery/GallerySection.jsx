@@ -58,6 +58,7 @@ export default function GallerySection({
                                     <AdvancedImage
                                         cldImg={img}
                                         onClick={() => setOpen(i)}
+                                        alt={'Снимки от озеленяване и поддръжка на наши обекти'}
                                         className="rounded-xl shadow-md w-full h-64 object-cover hover:scale-105 transition-transform duration-300 cursor-zoom-in"
                                     />
                                 </motion.div>
@@ -79,6 +80,7 @@ export default function GallerySection({
                         backgroundColor: "rgba(0,0,0,0.85)"
                     }
                 }}
+                alt={'Снимки от озеленяване и поддръжка на наши обекти'}
             />
         </>
     );

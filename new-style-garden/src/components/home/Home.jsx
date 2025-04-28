@@ -20,18 +20,18 @@ export default function Home() {
         <>
             <SEO
                 title="New Style Garden | Озеленяване и поддръжка на градини в София"
-                description="Професионално озеленяване, изграждане на поливни системи, затревяване с чим и семена. Доверете се на New Style Garden – естетика, природа и спокойствие в градината ви."
+                description="Професионално озеленяване и поддръжка, изграждане на поливни системи, затревяване с чим и семена. Доверете се на New Style Garden – естетика, природа и спокойствие в градината ви."
                 url="https://newstylegarden.com/"
                 image="https://res.cloudinary.com/dgvzzts4y/image/upload/v1744802263/gallery/hero-slider1_hiurqf_xcibzq.jpg"
             />
-                <motion.div
-                    variants={childVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.1 }}
-                >
-                    <HeroSlider />
-                </motion.div>
+            <motion.div
+                variants={childVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.1 }}
+            >
+                <HeroSlider />
+            </motion.div>
             <div className='bg-main min-h-screen overflow-hidden pb-20'>
                 <div className="container mx-auto px-4">
                     <motion.div
