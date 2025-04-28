@@ -56,7 +56,7 @@ export default function HeroSlider() {
                                             .image(image)
                                             .format(auto())
                                             .delivery(quality("auto"))
-                                            .resize(fill().width(3840).height(2160))
+                                            .resize(fill().width(1920).height(1080))
                                         }
                                         alt={'Градина, изградена от New Style Garden'}
                                         key={i}
