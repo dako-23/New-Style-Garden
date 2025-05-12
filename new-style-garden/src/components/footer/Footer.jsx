@@ -1,4 +1,4 @@
-import { FaFacebookF, FaInstagram, FaViber } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaViber, FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
@@ -17,17 +17,23 @@ export default function Footer() {
                         <Link to="/prices" className="hover:text-green-400 transition">Цени</Link>
                         <Link to="/privacy-policy" className="hover:text-green-400 transition">Политика за поверителност</Link>
                     </div>
-
-                    <div className="flex gap-4 text-xl">
-                        <a href="https://www.facebook.com/NewStylegarden" target="_blank" rel="noreferrer" className="hover:text-green-500 transition">
-                            <FaFacebookF />
-                        </a>
-                        <a href="https://www.instagram.com/newstylegarden" target="_blank" rel="noreferrer" className="hover:text-green-500 transition">
-                            <FaInstagram />
-                        </a>
-                        <a href="viber://chat?number=%2B359879914560" target="_blank" rel="noreferrer" className="hover:text-green-500 transition">
-                            <FaViber />
-                        </a>
+                    <div className="flex flex-col items-center gap-2 text-xl">
+                        <div className="flex gap-4">
+                            <a href="https://www.facebook.com/NewStylegarden" target="_blank" rel="noreferrer" className="hover:text-green-500 transition">
+                                <FaFacebookF />
+                            </a>
+                            <a href="https://www.instagram.com/newstylegarden" target="_blank" rel="noreferrer" className="hover:text-green-500 transition">
+                                <FaInstagram />
+                            </a>
+                            <a href="viber://chat?number=%2B359879914560" target="_blank" rel="noreferrer" className="hover:text-green-500 transition">
+                                <FaViber />
+                            </a>
+                        </div>
+                        <p className="text-gray-100 text-xs text-center">
+                            <a href="https://github.com/dako-23" className="text-sm flex items-center justify-center gap-2" target="_blank" rel="noreferrer">
+                                Web designed by dako-23 <FaGithub size={18} />
+                            </a>
+                        </p>
                     </div>
                 </div>
 
